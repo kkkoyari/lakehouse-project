@@ -153,6 +153,7 @@ activemq-data/
 .venv
 env/
 venv/
+
 ENV/
 env.bak/
 venv.bak/
@@ -217,9 +218,26 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-.env
-data/
 venv/
-*.duckdb
-__pycache__/
+.vscode/
 
+# Logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# Игнорируем файлы с секретами
+.env
+
+# Игнорируем данные и базы данных
+data/
+test/
+*.db
+*.duckdb
+lakehouse_project.drawio
+notebooks/
+
+# Игнорируем кэш Python
+__pycache__/
+*.pyc
+.DS_Store
