@@ -1,0 +1,32 @@
+[project]
+name = "crypto-prices-lakehouse"
+version = "0.1.0"
+description = "A small lakehouse pipeline for cryptocurrency prices"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "dotenv>=0.9.9",
+    "duckdb>=1.5.5",
+    "psycopg2-binary>=2.9.13",
+    "python-dotenv>=1.2.3",
+    "requests>=2.34.2",
+]
+
+[project.optional-dependencies]
+forecast = [
+    "cmdstanpy>=1.2.5",
+    "prophet>=1.1.7",
+]
+
+[dependency-groups]
+notebooks = [
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.3",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+]
+
+[tool.uv]
+package = false
+default-groups = ["notebooks"]
