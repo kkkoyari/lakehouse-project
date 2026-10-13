@@ -24,7 +24,7 @@ BRONZE_GLOB = str(BRONZE_DIR / "**" / "*.parquet")
 INCREMENTAL_COL = "price_id"
 BACKUP_RE = re.compile(r"^\.(?P<source>.+\.parquet)\.compacting-(?P<run_id>[0-9a-f]+)$")
 SCHEDULE_TZ = ZoneInfo("UTC")
-SCHEDULE_TIME = datetime_time(hour=5, minute=0)
+SCHEDULE_TIME = datetime_time(hour=9, minute=0)
 
 
 def _sql_string(value: str) -> str:

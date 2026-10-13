@@ -11,6 +11,7 @@ CREATE TABLE api_raw.crypto_prices (
     market_cap NUMERIC(24, 4),
     volume_24h NUMERIC(24, 4),
     change_24h NUMERIC(10, 6),
+    last_updated_at TIMESTAMP,
     fetched_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -19,6 +20,3 @@ ON api_raw.crypto_prices (coin_id, last_updated_at DESC);
 
 GRANT SELECT, INSERT, UPDATE ON api_raw.crypto_prices TO crypto_writer;
 GRANT USAGE, SELECT ON SEQUENCE api_raw.crypto_prices_price_id_seq TO crypto_writer;
-
-ALTER TABLE api_raw.crypto_prices 
-ADD COLUMN last_updated_at TIMESTAMP;

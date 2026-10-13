@@ -19,7 +19,7 @@ API_KEY = os.getenv("API_KEY")
 API_URL = f"{API_BASE_URL}/simple/price" if API_BASE_URL else None
 API_HEADERS = {"x-cg-demo-api-key": API_KEY} if API_KEY else {}
 API_PARAMS = {
-    "ids": "bitcoin,ethereum,solana,toncoin,the-open-network",
+    "ids": "bitcoin,ethereum,solana,the-open-network",
     "vs_currencies": "usd,eur",
     "include_market_cap": "true",
     "include_24hr_vol": "true",
